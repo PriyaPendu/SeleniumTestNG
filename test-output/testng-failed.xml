@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="LoginTest(failed)">
+    <parameter name="filename" value="loginreport.html"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="WBpath" value="login.xlsx"/>
+    <parameter name="url" value="https://www.jiohomes.com/"/>
+    <classes>
+      <class name="testcases.LoginTest">
+        <methods>
+          <include name="closeReport"/>
+          <include name="makeWBconnection"/>
+          <include name="logintest"/>
+          <include name="closeWBConnection"/>
+          <include name="closeBrowser"/>
+          <include name="openBrowser"/>
+          <include name="signin"/>
+          <include name="generateReport"/>
+        </methods>
+      </class> <!-- testcases.LoginTest -->
+    </classes>
+  </test> <!-- LoginTest(failed) -->
+  <test thread-count="5" name="ShopTest(failed)">
+    <parameter name="filename" value="Shopreport.html"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="WBpath" value="Shop.xlsx"/>
+    <parameter name="url" value="https://www.jiohomes.com/"/>
+    <classes>
+      <class name="testcases.ShopTest">
+        <methods>
+          <include name="closeReport"/>
+          <include name="paymentTest"/>
+          <include name="makeWBconnection"/>
+          <include name="closeWBConnection"/>
+          <include name="deliverstatus"/>
+          <include name="closeBrowser"/>
+          <include name="qordertest"/>
+          <include name="openBrowser"/>
+          <include name="generateReport"/>
+        </methods>
+      </class> <!-- testcases.ShopTest -->
+    </classes>
+  </test> <!-- ShopTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
